@@ -1,4 +1,4 @@
-Este script en python funciona como un actualizador de la versión EA Pinneaple de Yuzu.
+Este script en python funciona como un actualizador de la versión [EA Pinneaple de Yuzu](https://github.com/pineappleEA/pineapple-src/releases).
 
 Está hecho pensando en usuarios que no conocen de programación.
 
