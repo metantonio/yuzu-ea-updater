@@ -28,20 +28,3 @@ Para ejecutar el script, basta con darle doble click al archivo: `Yuzu Updater.b
 ```sh
 python3 YuzuUpdate.py
 ```
-## Usando el Script
-
-Es necesario haber solicitado primero una API KEY en AEMET OpenData, la pueden solicitar en el siguiente link: https://opendata.aemet.es/centrodedescargas/altaUsuario?
-
-A continuación, deben conocer el rango de fechas del cuál desean solicitar la información, y el código de la estación.
-
-Seguir los pasos, al pie de la letra, que se muestran en la interface de Python.
-
-## Me generó el archivo de excel FINAL.CSV pero no está tabulado.
-
-Para esto hay que elegir toda la columna donde está la información solicitada (generalmente toda la columna A), ir a la pestana de Datos> Texto a Columna.
-Y elegir el delimitador, el cual probablemente es (,) si la pc está en castellano y (;) si está en inglés.
-
-También se genera un archivo llamado `newfile.json` el cuál contiene la información original en formato .json de la url solicitada
-
-Para modificaciones, o solicitudes me pueden escribir a:
-antonio_martinez88@hotmail.com
