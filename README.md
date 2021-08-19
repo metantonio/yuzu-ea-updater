@@ -16,7 +16,6 @@ También es necesario instalar algunas dependencias de Python, para esto tan só
 ```sh
 pip3 install requests
 python3 -m pip install requests
-python3 -m pip install pandas
 python3 -m pip install urllib.request
 python3 -m pip install urllib2
 ```
