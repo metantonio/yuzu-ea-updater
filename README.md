@@ -32,12 +32,15 @@ python3 YuzuUpdate.py
 ## Próximas Mejoras
 <ol>
     <li>
-      <a href="#">Verificación si el archivo ya fue descargado</a>
+      <a href="#">Verificación si el archivo existe en el directorio</a>
       <ul>
-        <li><a href="#">En caso afirmativo descomprimirlo</a></li>
+        <li><a href="#">En caso negativo continuar con la descarga y descomprimir</a></li>
       </ul>
       <ul>
-        <li><a href="#">En caso negativo no hacer nada</a></li>
+        <li><a href="#">En caso afirmativo, no hacer nada</a></li>
       </ul>
+    </li>
+    <li>
+	<a href="#">Verificación si la descarga se completó al 100% (hasta ahora la verificación la hace el usuario visualmente comprobando que llegue a 100%)</a>
     </li>
 </ol>
