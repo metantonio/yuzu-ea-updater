@@ -27,3 +27,17 @@ Para ejecutar el script, basta con darle doble click al archivo: `Yuzu Updater.b
 ```sh
 python3 YuzuUpdate.py
 ```
+
+
+## Próximas Mejoras
+<ol>
+    <li>
+      <a href="#">Verificación si el archivo ya fue descargado</a>
+      <ul>
+        <li><a href="#">En caso afirmativo descomprimirlo</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">En caso negativo no hacer nada</a></li>
+      </ul>
+    </li>
+</ol>
