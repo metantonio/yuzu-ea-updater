@@ -38,33 +38,35 @@ def download_file(url, dest=None):
         filename = url2.split('/')[-1]
     if dest:
         filename = os.path.join(dest, filename)
+    if not os.path.exists(filename):
+        print("Comprobar porcentaje de descarga sea 100% \n")
+        with open(filename, 'wb') as f:
+            meta = u.info()
+            meta_func = meta.getheaders if hasattr(meta, 'getheaders') else meta.get_all
+            meta_length = meta_func("Content-Length")
+            file_size = None
+            if meta_length:
+                file_size = int(meta_length[0])
+            print("Downloading: {0} Bytes: {1} \n".format(url, file_size))
 
-    with open(filename, 'wb') as f:
-        meta = u.info()
-        meta_func = meta.getheaders if hasattr(meta, 'getheaders') else meta.get_all
-        meta_length = meta_func("Content-Length")
-        file_size = None
-        if meta_length:
-            file_size = int(meta_length[0])
-        print("Downloading: {0} Bytes: {1} \n".format(url, file_size))
+            file_size_dl = 0
+            block_sz = 8192
+            while True:
+                buffer = u.read(block_sz)
+                if not buffer:
+                    break
 
-        file_size_dl = 0
-        block_sz = 8192
-        while True:
-            buffer = u.read(block_sz)
-            if not buffer:
-                break
+                file_size_dl += len(buffer)
+                f.write(buffer)
 
-            file_size_dl += len(buffer)
-            f.write(buffer)
-
-            status = "{0:16}".format(file_size_dl)
-            if file_size:
-                status += "   [{0:6.2f}%]".format(file_size_dl * 100 / file_size)
-            status += chr(13)
-            print(status, end="")
-        print()
-
+                status = "{0:16}".format(file_size_dl)
+                if file_size:
+                    status += "   [{0:6.2f}%]".format(file_size_dl * 100 / file_size)
+                status += chr(13)
+                print(status, end="")
+            print()
+    if os.path.exists(filename):
+        print("La descarga de la última versión ya existe en el directorio \n")
     return filename
 
 if __name__ == "__main__":  # Only run if this file is called directly
@@ -77,5 +79,5 @@ if __name__ == "__main__":  # Only run if this file is called directly
 
 
 
-print("Comprobar porcentaje de descarga sea 100% \n")
+
 print("Fin \n")
