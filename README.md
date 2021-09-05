@@ -3,7 +3,9 @@ Este script en python funciona como un actualizador automático de la última ve
 Está hecho pensando en usuarios que no conocen de programación.
 
 Descargar los archivos en una misma carpeta. 
-<img src="https://img.shields.io/github/repo-size/metantonio/yuzu-ea-updater" href="https://github.com/metantonio/yuzu-ea-updater/archive/refs/heads/main.zip"/>
+<a href="https://github.com/metantonio/yuzu-ea-updater/archive/refs/heads/main.zip">
+	<img src="https://img.shields.io/github/repo-size/metantonio/yuzu-ea-updater"/>
+</a>
 
 ## Qué se necesita si soy usuario de Windows 10?
 
