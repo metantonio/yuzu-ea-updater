@@ -3,6 +3,9 @@ import sys, tempfile, logging
 import json, requests 
 import http.client
 import os
+from zipfile import ZipFile
+from pyunpack import Archive
+import patoolib
 
 if sys.version_info >= (3,):
     import urllib.request as urllib2
@@ -69,6 +72,25 @@ def download_file(url, dest=None):
         print("La descarga de la última versión ya existe en el directorio \n")
     return filename
 
+def unzip_file(file_name):
+    wd = os.getcwd()
+    print("working directory es ", wd)
+    print("file name to unzip: ", file_name)
+    #path_to_zip_file = wd
+    directory_to_extract_to=wd
+    with ZipFile(file_name, 'r') as zip_ref:
+        zip_ref.extractall(directory_to_extract_to)
+    print("extracción terminada")
+
+def unzip_file_7z(file_name):
+    wd = os.getcwd()
+    #print("working directory es ", wd)
+    print("Archivo a descomprimir: ", file_name)
+    #path_to_zip_file = wd
+    directory_to_extract_to = wd # + "\\test"
+    Archive(file_name).extractall(directory_to_extract_to)
+    print("Extraccion Finalizada")
+
 if __name__ == "__main__":  # Only run if this file is called directly
     print("Testing with: ")
     print(url2)
@@ -76,7 +98,7 @@ if __name__ == "__main__":  # Only run if this file is called directly
     filename = download_file(url2)
     print("Nombre Archivo: \n")
     print(filename)
-
+    unzip_file_7z(filename)
 
 
 

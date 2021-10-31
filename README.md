@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/metantonio/yuzu-ea-updater/main/portada.jpg">
 </p>
 
-Este script en python funciona como un actualizador automático de la última versión disponible de [EA Pinneaple de Yuzu](https://github.com/pineappleEA/pineapple-src/releases).
+Este script en python funciona como un actualizador automático de la última versión disponible de [EA Pinneaple de Yuzu](https://github.com/pineappleEA/pineapple-src/releases). Descarga y descomprime en la misma carpeta en la que se encuentre este script. Se recomienda crear un acceso directo del `Yuzu updater.bat` en el escritorio.
 
 Está hecho pensando en usuarios que no conocen de programación.
 
@@ -38,9 +38,7 @@ python3 YuzuUpdate.py
 
 ## Próximas Mejoras
 <ol>
-    <li>
-      <a href="#">Descomprimir el archivo después de decargado</a>      
-    </li>
+  
     <li>
 	<a href="#">Verificación si la descarga se completó al 100% (hasta ahora la verificación la hace el usuario visualmente comprobando que llegue a 100%)</a>
     </li>
