@@ -23,8 +23,12 @@ También es necesario instalar algunas dependencias de Python la primera vez par
 ```sh
 pip3 install requests
 python3 -m pip install requests
+pip install patool
+echo En caso de haber varias versiones python o usuario
 python3 -m pip install urllib.request
 python3 -m pip install urllib2
+python3 -m pip install pyunpack
+python3 -m pip install patool
 ```
 
 ## Cómo ejecuto el script de Python?
