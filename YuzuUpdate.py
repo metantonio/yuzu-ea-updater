@@ -68,6 +68,7 @@ def download_file(url, dest=None):
                 status += chr(13)
                 print(status, end="")
             print()
+            unzip_file_7z(filename)
     if os.path.exists(filename):
         print("La descarga de la última versión ya existe en el directorio \n")
     return filename
@@ -98,7 +99,7 @@ if __name__ == "__main__":  # Only run if this file is called directly
     filename = download_file(url2)
     print("Nombre Archivo: \n")
     print(filename)
-    unzip_file_7z(filename)
+    #unzip_file_7z(filename)
 
 
 
